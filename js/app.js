@@ -26,7 +26,7 @@ $(function(){
   };
 
   $.ajax({
-    url: 'https://localhost:3443/tiles/surveys/' + SURVEYID + '/tile.json',
+    url: 'https://app.localdata.com/tiles/surveys/' + SURVEYID + '/tile.json',
     type: 'POST',
     dataType: 'json',
     cache: false,
