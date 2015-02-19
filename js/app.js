@@ -13,8 +13,9 @@ var simpleStyles = (function (template) {
 $(function(){
 
   L.mapbox.accessToken = 'pk.eyJ1IjoibWF0dGgiLCJhIjoicGFzV1ZkWSJ9.KeK3hKmM52XpUEHHx_F8NQ';
-  var map = L.mapbox.map('map', 'matth.l8e9ppm3')
-      .setView([41.6278, -83.6265], 13);
+  var map = L.mapbox.map('map', 'matth.l8e9ppm3', {
+    maxZoom: 16
+  }).setView([41.6278, -83.6265], 13);
 
   map.addControl(L.mapbox.geocoderControl('mapbox.places'));
 
