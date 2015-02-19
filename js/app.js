@@ -33,7 +33,7 @@ $(function(){
     contentType: 'application/json',
     data: JSON.stringify(layerDef)
   }).done(function(tilejson) {
-    var tileLayer = L.tileLayer('https:' + tilejson.tiles[0]).addTo(map);
+    var tileLayer = L.tileLayer('https:' + tilejson.tiles[0]).addTo(map).bringToFront();
     console.log("Got tj", tilejson, tilejson.tiles[0], map, tileLayer);
   })
   .fail(function(jqXHR, textStatus, errorThrown) {
